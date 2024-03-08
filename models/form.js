@@ -1,25 +1,27 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../util/database');
-const Form = require('./form'); // Import the Form model
 
-const Image = sequelize.define('Image', {
+const Form = sequelize.define('Form', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
   },
-  filename: {
+  title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  data: {
-    type: DataTypes.BLOB('long'),
-    allowNull: false,
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  longitude: {
+    type: DataTypes.STRING,
+  },
+  latitude: {
+    type: DataTypes.STRING,
   },
 });
 
-// Define association between Image and Form
-Image.belongsTo(Form, { foreignKey: 'formId' });
-
-module.exports = Image;
+module.exports = Form;

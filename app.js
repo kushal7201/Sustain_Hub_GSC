@@ -2,9 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const sequelize = require("./util/database");
-const userRoutes = require("./routes/user"); // Import your user routes
-const formRoutes = require("./routes/form"); // Import your form routes
-const imageRoutes = require("./routes/image"); // Import your image routes
+const User = require("./models/user");
+const Form = require("./models/form");
+const userRoutes = require("./routes/user");
+const formRoutes = require("./routes/form");
 
 const app = express();
 
@@ -18,16 +19,23 @@ app.use(bodyParser.json());
 // Serve static files (e.g., images) from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
 
+// Define associations in the app.js file
+// Comment out associations temporarily
+ User.hasMany(Form);
+ Form.belongsTo(User);
+
 // Set up your routes
 app.use("/", (req, res, next) => {
   res.render("addForm");
 });
 app.use("/user", userRoutes);
 app.use("/form", formRoutes);
-app.use("/image", imageRoutes);
 
 // Sync the database
-sequelize.sync().then(() => {
+sequelize.sync({ force: true }).then(() => {
+  // Uncomment associations after tables are created
+  User.hasMany(Form);
+  Form.belongsTo(User);
   console.log("Database synced successfully");
 });
 

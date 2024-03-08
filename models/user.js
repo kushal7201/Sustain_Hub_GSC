@@ -1,21 +1,20 @@
-const Sequelize = require("sequelize");
-const sequelize = require("../util/database");
-const Form = require("./form"); // Import the Form model
+const { DataTypes } = require('sequelize');
+const sequelize = require('../util/database');
 
-const User = sequelize.define("User", {
+const User = sequelize.define('User', {
   id: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
   },
   username: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },
   email: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
     validate: {
@@ -23,12 +22,9 @@ const User = sequelize.define("User", {
     },
   },
   password: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });
-
-// Define association between User and Form
-User.hasMany(Form, { foreignKey: "userId" });
 
 module.exports = User;
