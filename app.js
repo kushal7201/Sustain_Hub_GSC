@@ -6,33 +6,39 @@ const User = require("./models/user");
 const Form = require("./models/form");
 const userRoutes = require("./routes/user");
 const formRoutes = require("./routes/form");
+const multer = require("multer");
 
 const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", "views");
-
-// Body parsing middleware
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// Serve static files (e.g., images) from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
+
+const upload = multer({ storage: multer.memoryStorage });
 
 // Define associations in the app.js file
 // Comment out associations temporarily
- User.hasMany(Form);
- Form.belongsTo(User);
+User.hasMany(Form);
+Form.belongsTo(User);
 
 // Set up your routes
+app.post("/submit-form", upload.single("profile_pic"), (req, res, next) => {
+  console.log("We have reached this middleware where we are trying to print the uploaded image!!!!");
+  const image = req.file;
+  console.log(image);
+  next();
+});
 app.use("/", (req, res, next) => {
   res.render("addForm");
+  next();
 });
+
 app.use("/user", userRoutes);
 app.use("/form", formRoutes);
 
 // Sync the database
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
   // Uncomment associations after tables are created
   User.hasMany(Form);
   Form.belongsTo(User);
