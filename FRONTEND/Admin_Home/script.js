@@ -26,7 +26,11 @@ updateMap = () => {
                     .setPopup(
                         new mapboxgl.Popup({ offset: 25 }) // add popups
                             .setHTML(
-                                `<h3>${element.country}</h3><p>${element.name}</p>`
+                                `<p class = "fs-6 fw-bold">${element.country}</p class = "fs-6 fw-1=bolder"><p>${element.name}</p>
+                                <a href = "https://www.google.com">More Details</a>`
+                                // `<h4>${element.title}</h4><p>${element.desc}</p>
+                                // <a href = "https://www.google.com">More Details</a>`
+                                
                             )
                     )
                     .addTo(map);
