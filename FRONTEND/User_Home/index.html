@@ -41,7 +41,7 @@
   <div class="d-flex align-items-center">
     <div style="width: fit-content; padding: 20px; background-color: rgb(233, 233, 233); border-radius: 4px;"
       class="container-sm">
-      <form method="post">
+      <form action="" method="post">
         <h4 class="text-center mb-4">Report a Problem</h4>
         <div class="mb-3">
           <label for="category" class="form-label">Select Category:</label>
@@ -59,7 +59,7 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Upload a photo:</label>
-            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png">
+            <input required class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
       </form>
