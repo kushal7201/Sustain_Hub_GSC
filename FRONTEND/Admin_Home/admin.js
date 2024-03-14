@@ -3,11 +3,9 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoid29sdmVyNzIwMiIsImEiOiJjbHRoZTF1NWcwM28zMmpzN
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-96, 37.8],
-    zoom: 3
+    center: [77.02, 28.65],
+    zoom: 5
 });
-
-
 
 updateMap = () => {
     fetch("/data.json")
@@ -22,7 +20,7 @@ updateMap = () => {
                 console.log("long: " + element.longitude)
 
                 new mapboxgl.Marker()
-                    .setLngLat([longitude,latitude])
+                    .setLngLat([longitude, latitude])
                     .setPopup(
                         new mapboxgl.Popup({ offset: 25 }) // add popups
                             .setHTML(
@@ -30,7 +28,7 @@ updateMap = () => {
                                 <a href = "https://www.google.com">More Details</a>`
                                 // `<h4>${element.title}</h4><p>${element.desc}</p>
                                 // <a href = "https://www.google.com">More Details</a>`
-                                
+
                             )
                     )
                     .addTo(map);

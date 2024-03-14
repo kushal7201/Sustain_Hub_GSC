@@ -7,18 +7,18 @@ city = "Talcher"
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [longitude,latitude],
+    center: [longitude, latitude],
     zoom: 10
 });
 
 
 new mapboxgl.Marker()
-                    .setLngLat([longitude,latitude])
-                    .setPopup(
-                        new mapboxgl.Popup({ offset: 25 }) // add popups
-                            .setHTML(
-                                `<p class = "fs-6 fw-bold">${city}</p>
+    .setLngLat([longitude, latitude])
+    .setPopup(
+        new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+                `<p class = "fs-6 fw-bold">${city}</p>
                                 <a href="https://www.google.com/maps/place/${latitude},${longitude}" target="_blank">Get Directions</a>`
-                            )
-                    )
-                    .addTo(map);
+            )
+    )
+    .addTo(map);

@@ -23,16 +23,25 @@ body {
     background-color: white;
 }
 
-.navbar{
+.navbar {
     padding-top: 0px;
 }
 
-.container-fluid{
+.container-fluid {
     background-color: rgb(56, 141, 76);
     color: white;
-  }    
+}
 
-  #abc {
+#abc {
     color: white;
 
+}
+
+.navbar-toggler-icon {
+    color: white;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
