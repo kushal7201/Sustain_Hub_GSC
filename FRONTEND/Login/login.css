@@ -29,3 +29,17 @@ color: rgb(6, 3, 3);
 font-size: 200cap;
 font-weight: bold;
 }
+
+.navbar{
+  padding-top: 0px;
+}
+
+.container-fluid{
+  background-color: rgb(56, 141, 76);
+  color: white;
+}    
+
+#abc {
+  color: white;
+
+}

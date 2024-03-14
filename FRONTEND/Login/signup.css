@@ -22,3 +22,17 @@ body {
 .container-sm {
     background-color: white;
 }
+
+.navbar{
+    padding-top: 0px;
+}
+
+.container-fluid{
+    background-color: rgb(56, 141, 76);
+    color: white;
+  }    
+
+  #abc {
+    color: white;
+
+}
