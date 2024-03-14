@@ -45,12 +45,12 @@
 
   <div class="d-flex align-items-center">
     <div class="container-sm">
-      <form action="" method="post">
+      <form action="" method="post" id="form-container">
         <h4 class="text-center mb-4">Report a Problem</h4>
         <div class="mb-3">
           <label for="category" class="form-label">Select Category:</label>
           <div class="dropdown mb-3" id="myDropdown">
-            <select style="" name="category" id="category" required>
+            <select name="category" id="category" required>
               <option value="1">Garbage Dump</option>
               <option value="2">Street Light Repair</option>
               <option value="3">Something else</option>
@@ -64,7 +64,7 @@
             <label for="formFile" class="form-label">Upload a photo:</label>
             <input required class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png">
           </div>
-          <button type="submit" class="btn btn-outline-success">Submit</button>
+          <button type="submit" id="submit-btn" class="btn btn-outline-success" disabled>Submit</button>
       </form>
     </div>
   </div>
