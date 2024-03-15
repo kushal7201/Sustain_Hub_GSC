@@ -16,8 +16,14 @@ Sustain Hub is a web platform designed to empower citizens to report and track p
 - NodeJs
 - SQL
 
+### Installation
 
-#### Getting Started
+```bash
+  npm install
+  npm start
+```
+
+### Getting Started
 - To set up Sustain Hub locally, follow these steps:
 Clone this repository: ```git clone https://github.com/kushal7201/Sustain_Hub_GSC```
 - Install project dependencies using the npm package manager ```npm install```.
