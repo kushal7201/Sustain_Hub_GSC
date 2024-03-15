@@ -19,8 +19,8 @@ Sustain Hub is a web platform designed to empower citizens to report and track p
 ### Installation
 
 ```bash
-  npm install
-  npm start
+npm install
+npm start
 ```
 
 ### Getting Started
