@@ -22,3 +22,20 @@ new mapboxgl.Marker()
             )
     )
     .addTo(map);
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all images with the class 'photo'
+    var images = document.querySelectorAll('.photo');
+
+    // Add click event listener to each image
+    images.forEach(function (image) {
+        image.addEventListener('click', function () {
+            // Retrieve the original dimensions of the image
+            var width = this.naturalWidth;
+            var height = this.naturalHeight;
+
+            // Open a new window with the original dimensions
+            window.open(this.src, 'image', 'width=' + width + ',height=' + height);
+        });
+    });
+});
