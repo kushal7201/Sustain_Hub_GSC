@@ -8,12 +8,19 @@
 section {
   position: relative;
   width: 100%;
-  min-width: 100vh;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
   margin-top: 5%;
 }
+.tagline{
+  font-size: 70px;
+  font-weight:500;
+}
+@media only screen and (max-width: 860px) {
+  .tagline{
+    font-size: 50px;
+  }
+} 
 header {
   position: absolute;
   top: 0;
@@ -87,27 +94,6 @@ header ul li a {
 .container .img-box img {
   max-width: 340px;
 }
-.thumb {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  display: flex;
-}
-.thumb li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  padding: ;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.thumb li:hover {
-  transform: translateY(-15px);
-}
-.thumb li img {
-  max-width: 600px;
-}
 .social {
   position: absolute;
   top: 50%;
@@ -127,7 +113,7 @@ header ul li a {
   transform: scale(0.6);
   filter: invert(1);
 }
-.circle {
+/* .circle {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +121,7 @@ header ul li a {
   height: 100%;
   background: #017143;
   clip-path: circle(600px at right 800px);
-}
+} */
 
 #image1 {
   width: 350px;
@@ -150,15 +136,6 @@ header ul li a {
 #image1-box {
   margin-top: 50px;
 }
-
-.navbar-brand fw-bold fs-4 {
-  color: rgb(190, 190, 66);
-}
-
-.navbar {
-  padding-top: 0px;
-}
-
 .container-sm {
   background-color: white;
 }
@@ -167,10 +144,6 @@ header ul li a {
   width: 100%;
   color: white;
 }
-.navbar-brand fw-bold fs-4 {
-  color: rgb(190, 190, 66);
-}
-
 .pt-3 px-3 fs-5 {
   font-size: 100px;
 }
@@ -212,10 +185,6 @@ header ul li a {
   padding-top: 0px;
 }
 
-.navbar-brand .fw-bold .fs-4 {
-  color: rgb(190, 190, 66);
-}
-
 .img-box {
   margin-left: 50%;
   height: 250px;
@@ -254,7 +223,7 @@ header ul li a {
 }
 
 .about-us {
-  background-color: rgb(129, 212, 149);
+  background-color: rgb(82, 183, 105);
   width: 60%;
   margin-left: 20%;
   margin-bottom: 10%;
@@ -267,4 +236,12 @@ header ul li a {
 h2 {
   text-align: center;
   padding-top: 10px;
+}
+
+body {
+  background-color: rgb(199, 229, 154);
+}
+
+a{
+  text-decoration: none;
 }
