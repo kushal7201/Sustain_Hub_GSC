@@ -135,8 +135,8 @@ export default function Users() {
                             <label htmlFor="category" className="form-label">Select Category:</label>
                             <div className="dropdown mb-3" id="myDropdown">
                                 <select name="category" id="category" required>
-                                    <option value="1">Garbage Dump</option>
-                                    <option value="2">Street Light Repair</option>
+                                    <option value="Garbage Dump">Garbage Dump</option>
+                                    <option value="Street Light Repair">Street Light Repair</option>
                                     <option value="3">Something else</option>
                                 </select>
                             </div>

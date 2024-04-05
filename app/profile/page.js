@@ -182,7 +182,7 @@ export default function ProfilePage() {
                                                     {editMode ? (
                                                         <button className="btn btn-outline-success" type="button" onClick={handleSave}>Save</button>
                                                     ) : (
-                                                        <button className="btn btn-outline-primary" onClick={handleEdit}>Edit</button>
+                                                        <button className="btn btn-outline-success" onClick={handleEdit}>Edit</button>
                                                     )}
                                                 </div>
                                             </div>
