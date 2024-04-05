@@ -1,17 +1,17 @@
     "use client"
     import { useEffect, useState } from 'react'
     import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
-    import { redirect, useRouter } from 'next/navigation'
+    import { redirect, useSearchParams } from 'next/navigation'
     import axios from 'axios'
     import 'mapbox-gl/dist/mapbox-gl.css'
     import "./details.css"
 
     export default function Details() {
 
-        const router = useRouter();
-        const { id, user_id } = router.query;
+        const searchParams = useSearchParams()
+        const issue_id = searchParams.get("id")
 
-        const issue_id = id;
+        const user_id = searchParams.get("user_id")
 
         const [title, setTitle] = useState("")
         const [description, setDescription] = useState("")
