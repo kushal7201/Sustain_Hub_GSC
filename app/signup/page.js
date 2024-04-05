@@ -30,6 +30,10 @@ export default function Signup() {
     };
 
     const notify = () => toast("Wow")
+
+    const redirectToLoginPage = () => {
+        router.push("/login");
+    }
     
 
     return (
@@ -87,6 +91,12 @@ export default function Signup() {
                             <input required type="password" className="form-control" id="exampleInputPassword1" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                         </div>
                         <button type="submit" className="btn btn-outline-success">Submit</button>
+                        <div className="mb-3">
+                            <a>
+                                <span>Already a user? </span>
+                            <button onClick={redirectToLoginPage} className="btn btn-outline-primary">Login</button>
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>

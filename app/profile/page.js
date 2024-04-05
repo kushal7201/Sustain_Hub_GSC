@@ -1,15 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import "./profile.css"
-import { useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import axios from 'axios'
 
 export default function ProfilePage() {
 
-    const router = useRouter();
-    const { id } = router.query;
-
-    const user_id = id;
+    const searchParams = useSearchParams();
+    const user_id = searchParams.get('id');
 
     const [details, setDetails] = useState(null)
 

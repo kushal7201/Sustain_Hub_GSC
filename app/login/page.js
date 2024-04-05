@@ -10,6 +10,10 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const redirectToSignupPage = () => {
+        router.push("/signup");
+    }
+
     async function reroute() {
         const session = await getSession();
         if (session) {
@@ -84,6 +88,12 @@ export default function Login() {
                             <div id="passHelp" className="form-text">Note: The password should be minimum of 8 characters.</div>
                         </div>
                         <button type="submit" className="btn btn-outline-success" id="kushal">Submit</button>
+                        <div className="mb-3">
+                            <a>
+                                <span>Not a user? </span>
+                            <button onClick={redirectToSignupPage} className="btn btn-outline-primary">Signup</button>
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>

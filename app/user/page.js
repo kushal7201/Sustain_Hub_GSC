@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import "./user.css"
 import axios from "axios"
 import { signOut } from "next-auth/react"
@@ -21,11 +21,9 @@ export default function Users() {
         getDetails();
     }, [])
 
-    const router = useRouter();
-    const { id } = router.query;
-
-    user_id = id;
-
+    const searchParams = useSearchParams();
+    const user_id = searchParams.get('id');
+    
     async function getDetails() {
         try {
             const response = await axios.post("/api/user", { user_id });
