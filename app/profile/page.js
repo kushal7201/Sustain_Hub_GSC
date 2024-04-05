@@ -154,6 +154,7 @@ export default function ProfilePage() {
                                                     </>
                                                 ) : (
                                                     <li className="list-group-item">
+                                                        <span>Phone  </span>
                                                         <input type="text" name="phone" value={editedDetails.phone} onChange={handleChange} />
                                                     </li>
                                                 )}
@@ -170,6 +171,7 @@ export default function ProfilePage() {
                                                         </div>
                                                     </>) :
                                                     <li className="list-group-item">
+                                                        <span>Address  </span>
                                                         <input type="text" name="address" value={editedDetails.address} onChange={handleChange} />
                                                     </li>
                                                 }
