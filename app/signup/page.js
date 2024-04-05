@@ -39,9 +39,9 @@ export default function Signup() {
     return (
         <body>
             <ToastContainer />
-            <nav className="navbar navbar-expand-   lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand fw-bold fs-4" id="abc" href="#">SustainHub</a>
+                    <a className="navbar-brand fw-bold fs-4" id="abc" href="/">SustainHub</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -54,10 +54,10 @@ export default function Signup() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item px-2">
-                                <a className="nav-link active" aria-current="page" id="abc" href="#">Login</a>
+                                <a className="nav-link active" aria-current="page" id="abc" href="/login">Login</a>
                             </li>
                             <li className="nav-item px-2">
-                                <a className="nav-link active" aria-current="page" id="abc" href="#">Sign up</a>
+                                <a className="nav-link active" aria-current="page" id="abc" href="/signup">Sign up</a>
                             </li>
                         </ul>
                     </div>
@@ -92,10 +92,8 @@ export default function Signup() {
                         </div>
                         <button type="submit" className="btn btn-outline-success">Submit</button>
                         <div className="mb-3">
-                            <a>
-                                <span>Already a user? </span>
-                            <button onClick={redirectToLoginPage} className="btn btn-outline-primary">Login</button>
-                            </a>
+                            <span>Already a user? </span>
+                            <a className="forwardlink" href="/login">Login</a>
                         </div>
                     </form>
                 </div>

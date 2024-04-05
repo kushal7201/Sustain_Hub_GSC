@@ -45,3 +45,7 @@ body {
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
+.forwardlink{
+    text-decoration: none;
+  }

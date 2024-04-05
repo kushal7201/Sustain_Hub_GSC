@@ -47,7 +47,7 @@ export default function Login() {
             <ToastContainer />
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand fw-bold fs-4" id="abc" href="#">SustainHub</a>
+                    <a className="navbar-brand fw-bold fs-4" id="abc" href="/">SustainHub</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -89,10 +89,8 @@ export default function Login() {
                         </div>
                         <button type="submit" className="btn btn-outline-success" id="kushal">Submit</button>
                         <div className="mb-3">
-                            <a>
-                                <span>Not a user? </span>
-                            <button onClick={redirectToSignupPage} className="btn btn-outline-primary">Signup</button>
-                            </a>
+                            <span>Not a user? </span>
+                            <a className="forwardlink" href="/signup">Signup</a>
                         </div>
                     </form>
                 </div>
