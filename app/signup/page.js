@@ -56,9 +56,6 @@ export default function Signup() {
                             <li className="nav-item px-2">
                                 <a className="nav-link active" aria-current="page" id="abc" href="/login">Login</a>
                             </li>
-                            <li className="nav-item px-2">
-                                <a className="nav-link active" aria-current="page" id="abc" href="/signup">Sign up</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
