@@ -1,36 +1,31 @@
-# sustainHubThis is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sustain Hub
+### Overview
+Sustain Hub is a web platform designed to empower citizens to report and track public facility issues within their local community and get reward points. By providing an intuitive interface, Sustain Hub makes it easy for users to pinpoint problems and submit detailed reports, including photos, which can be accessed and addressed by local authorities.
+### Key Features
+- User registration and authentication for both citizens and authorities
+- Issue reporting with location tagging, descriptions, and photo attachments
+- Issue management dashboard for authorities to view, filter, and update issue reports
+- Map integration to display issue locations and details for the admin
+- User-friendly and responsive design
 
-## Getting Started
+### Tech Stack
+- ReactJs
+- NextJS
+- HTML/CSS/Javascript
+- Bootstrap
+- NodeJs
+- SQL
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Getting Started
+- To set up Sustain Hub locally, follow these steps:
+Clone this repository: ```git clone https://github.com/kushal7201/Sustain_Hub_GSC```
+- Install project dependencies using the npm package manager ```npm install```.
+- Create a database for the project and update the database configuration settings accordingly.
+- Run the project locally using the command ```npm start```.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. 
+### Contributors
+- Kushal Bansal
+- Sugam Sareen
+- Nandini Gupta
+- Parimal Amrutkar
