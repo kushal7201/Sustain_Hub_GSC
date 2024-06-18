@@ -24,8 +24,7 @@ Clone this repository: ```git clone https://github.com/kushal7201/Sustain_Hub_GS
 - Create a database for the project and update the database configuration settings accordingly.
 - Run the project locally using the command ```npm start```.
 
-### Contributors
-- Kushal Bansal
+### Other Contributors
 - Sugam Sareen
 - Nandini Gupta
 - Parimal Amrutkar
