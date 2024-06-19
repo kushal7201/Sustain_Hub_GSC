@@ -28,3 +28,6 @@ Clone this repository: ```git clone https://github.com/kushal7201/Sustain_Hub_GS
 - Sugam Sareen
 - Nandini Gupta
 - Parimal Amrutkar
+
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
